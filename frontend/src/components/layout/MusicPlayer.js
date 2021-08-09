@@ -40,7 +40,6 @@ export default function MusicPlayer(props){
 
     let [volumeValue,setVolumeValue] = useState(getCookie("volume")) || useState(50)
     let [error,setError] = useState('')
-    let [trackPosition,setTrackPosition] = useState(10000)
 
     useEffect(() => {
         const interval = setInterval(setVolume,500)
@@ -49,10 +48,6 @@ export default function MusicPlayer(props){
 
     const handleRange = (event,newVlaue) => {
         setVolumeValue(newVlaue)
-    }
-
-    const handleTrackRange = (event,newVlaue) => {
-        setTrackPosition(newVlaue)
     }
 
     const artistsInfoRender = () => {
